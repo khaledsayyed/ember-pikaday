@@ -52,6 +52,11 @@ export default Mixin.create({
     }
   }),
 
+  /**
+   * @type {Boolean}
+   */
+  keyboardInput: true,
+
   _defaultOptions() {
     const firstDay = this.get('firstDay');
 
@@ -70,7 +75,8 @@ export default Mixin.create({
       maxDate: this.get('maxDate') || null,
       defaultDate: this.get('defaultDate') || null,
       setDefaultDate: !!this.get('defaultDate'),
-      theme: this.get('theme') || null
+      theme: this.get('theme') || null,
+      keyboardInput: this.keyboardInput
     };
   },
 
